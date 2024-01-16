@@ -15,7 +15,7 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({ loadPageDataSync, path
   const translations = (pageContext.translations as Translation[]) || [];
 
   setHtmlAttributes({ lang: locale });
-  //if(options.generateMetaTags) {
+  if(options.generateMetaTags) {
     setHeadComponents([
       <link rel="alternate" hrefLang="x-default" href={siteUrl.href} />,
       <link rel="alternate" hrefLang={locale} href={new URL(pathname, siteUrl).href} />,
@@ -25,5 +25,5 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({ loadPageDataSync, path
         <meta key={t.locale} property="og:locale:alternate" content={t.locale.replace(`-`, `_`)} />,
       ]),
     ]);
-  //}
+  }
 };

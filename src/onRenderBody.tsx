@@ -15,13 +15,15 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({ loadPageDataSync, path
   const translations = (pageContext.translations as Translation[]) || [];
 
   setHtmlAttributes({ lang: locale });
-  setHeadComponents([
-    <link rel="alternate" hrefLang="x-default" href={siteUrl.href} />,
-    <link rel="alternate" hrefLang={locale} href={new URL(pathname, siteUrl).href} />,
-    <meta property="og:locale" content={locale.replace(`-`, `_`)} />,
-    ...translations.map((t) => [
-      <link key={t.locale} rel="alternate" hrefLang={t.locale} href={new URL(t.path, siteUrl).href} />,
-      <meta key={t.locale} property="og:locale:alternate" content={t.locale.replace(`-`, `_`)} />,
-    ]),
-  ]);
+  if(options.generateMetaTags) {
+    setHeadComponents([
+      <link rel="alternate" hrefLang="x-default" href={siteUrl.href} />,
+      <link rel="alternate" hrefLang={locale} href={new URL(pathname, siteUrl).href} />,
+      <meta property="og:locale" content={locale.replace(`-`, `_`)} />,
+      ...translations.map((t) => [
+        <link key={t.locale} rel="alternate" hrefLang={t.locale} href={new URL(t.path, siteUrl).href} />,
+        <meta key={t.locale} property="og:locale:alternate" content={t.locale.replace(`-`, `_`)} />,
+      ]),
+    ]);
+  }
 };

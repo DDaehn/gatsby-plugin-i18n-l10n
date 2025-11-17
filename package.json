@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-i18n-l10n",
-  "version": "5.14.1",
+  "version": "5.5.0",
   "description": "Providing i18n and l10n to Gatsby with react-intl. Besides translating pages and labels, you can also translate the slugs and paths and still link between translated sibling pages.",
   "keywords": [
     "gatsby",
@@ -40,9 +40,9 @@
     "upgrade-interactive": "npm-check -u"
   },
   "peerDependencies": {
-    "gatsby": "^5.0.0",
-    "gatsby-source-filesystem": "^5.0.0",
-    "react-intl": "^6.0.0 || ^7.0.0"
+    "gatsby": "^5.x",
+    "gatsby-source-filesystem": "^5.x",
+    "react-intl": "^6.x"
   },
   "peerDependenciesMeta": {
     "gatsby-source-filesystem": {
@@ -50,38 +50,38 @@
     }
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.26.8",
-    "@babel/preset-typescript": "^7.26.0",
-    "@testing-library/react": "^16.2.0",
-    "@types/jest": "^29.5.14",
-    "@types/react-test-renderer": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^6.20.0",
-    "@typescript-eslint/parser": "^6.20.0",
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.2",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.7",
+    "@types/react-test-renderer": "^18.0.5",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
     "babel-jest": "^29.7.0",
-    "babel-preset-gatsby": "^3.14.0",
+    "babel-preset-gatsby": "^3.12.1",
     "conventional-github-releaser": "3.1.5",
-    "eslint": "^8.56.0",
+    "eslint": "^8.52.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "gatsby": "^5.14.1",
-    "gatsby-source-filesystem": "^5.14.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "gatsby": "^5.12.9",
+    "gatsby-source-filesystem": "^5.12.1",
     "identity-obj-proxy": "3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "npm-check": "6.0.1",
-    "prettier": "^3.5.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-intl": "^7.1.6",
-    "react-test-renderer": "^18.3.1",
+    "prettier": "^3.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-intl": "^6.5.1",
+    "react-test-renderer": "18.2.0",
     "standard-version": "9.5.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "limax": "^4.1.0",

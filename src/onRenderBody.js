@@ -15,7 +15,6 @@ const onRenderBody = ({ loadPageDataSync, pathname, setHtmlAttributes, setHeadCo
     setHtmlAttributes({ lang: locale });
     if(options.generateMetaTags){
         setHeadComponents([
-            (0, jsx_runtime_1.jsx)("link", { rel: "alternate", hrefLang: "x-default", href: siteUrl.href }),
             (0, jsx_runtime_1.jsx)("link", { rel: "alternate", hrefLang: locale, href: new URL(pathname, siteUrl).href }),
             (0, jsx_runtime_1.jsx)("meta", { property: "og:locale", content: locale.replace(`-`, `_`) }),
             ...translations.map((t) => [

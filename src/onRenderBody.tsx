@@ -16,7 +16,7 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({ loadPageDataSync, path
 
   setHtmlAttributes({ lang: locale });
   setHeadComponents([
-    //<link rel="alternate" hrefLang="x-default" href={siteUrl.href} />,
+    <link rel="alternate" hrefLang="x-default" href={siteUrl.href} />,
     <link rel="alternate" hrefLang={locale} href={new URL(pathname, siteUrl).href} />,
     <meta property="og:locale" content={locale.replace(`-`, `_`)} />,
     ...translations.map((t) => [
